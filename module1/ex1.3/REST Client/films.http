@@ -1,0 +1,23 @@
+### Read all movies
+GET http://localhost:3000/films
+
+### Read all movies  with file variable
+@baseUrl = http://localhost:3000
+GET {{baseUrl}}/films
+
+### Read a single movie 
+GET {{baseUrl}}/films/2
+
+### Read all movie duration equal to  170
+GET {{baseUrl}}/films/?minimum-duration=170
+
+### Create a new movie 
+POST {{baseUrl}}/films
+Content-Type: application/json
+
+{
+    "title": "Pokemon",
+    "director":"pomme",
+    "duration": 210,
+    
+}
